@@ -1,0 +1,71 @@
+<%- include inc_client/header.ejs %>
+<%- include inc_client/menu.ejs %>
+
+      <main class="main-content">
+				<div class="breadcrumbs">
+					<div class="container">
+						<a href="/">Главная страница</a>
+						<span><i class="fa fa-arrow-right"></i></span>
+						<a href="/products">О компании</a>
+						<span><i class="fa fa-arrow-right"></i></span>
+						<span><%= title %></span>
+					</div>
+				</div>
+				<div class="fullwidth-block">
+					<div class="loyalty">
+						<div class="container">
+							<div class="row">
+								<h1 class="entry-title">Карта лояльности</h1>
+								<div class="col-md-12">
+									<div class="col-md-3">
+										<img src="images/loyalty.png" alt="" style="width: 250px; height: auto;">
+									</div>
+									<div class="col-md-9">
+										Вы хотите получать скидку до 20% на все виды добровольного страхования? Это ведь так просто сделать! Единожды купив полис на нашем сайте или в официальном офисе компании, вы получаете карту лояльности и можете не только узнавать о всех акциях и специальных предложениях компании, но и экономить при каждой покупке полиса.
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-9">
+										<br><br>
+										<div class="panel panel-default">
+											<div class="panel-heading">
+												<div class="panel-title">
+													<label for="how_to_get">Как получить карту?</label>
+												</div>
+												<input type="checkbox" id="how_to_get" style="display:none;">
+												<div id="hidden" class="panel-body">
+													Вы получаете карту бесплатно при оформлении полиса в Официальных офисах АО ЦФ СК «Виктория» или оформляя полис на сайте.
+												</div>
+											</div>
+										</div>
+										<div class="panel panel-default">
+											<div class="panel-heading">
+												<div class="panel-title">
+													<label for="how_to_use">Как мне воспользоваться скидкой?</label>
+												</div>
+											</div>
+											<input type="checkbox" id="how_to_use" style="display:none;">
+											<div id="hidden" class="panel-body">
+												При оформлении полиса назовите номер карты менеджеру в офисе или введите номер карты при расчете стоимости полиса в он-лайн калькуляторе.
+											</div>
+										</div>
+										<div class="panel panel-default">
+											<div class="panel-heading">
+												<div class="panel-title">
+													<label for="how_long">Какой срок жизни у карты лояльности?</label>
+												</div>
+											</div>
+											<input type="checkbox" id="how_long" style="display:none;">
+											<div id="hidden" class="panel-body">
+												Ваша карта бессрочна, вы можете использовать ее неограниченное количество раз.
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+
+<%- include inc_client/footer.ejs %>

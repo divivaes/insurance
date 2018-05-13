@@ -1,0 +1,9 @@
+<div id="messages" class="container message-box">
+    <% Object.keys(messages).forEach(function (type) { %>
+    <div class="alert alert-<%= type %>" role="alert">
+        <% messages[type].forEach(function (message) { %>
+        <strong><%= message %></strong>
+        <% }) %>
+    </div>
+    <% }) %>
+</div>

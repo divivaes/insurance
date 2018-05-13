@@ -1,0 +1,166 @@
+<%- include inc_client/header.ejs %>
+<%- include inc_client/menu.ejs %>
+
+
+      <main class="main-content">
+        <div class="breadcrumbs">
+          <div class="container">
+            <a href="/">Главная страница</a>
+            <span><i class="fa fa-arrow-right"></i></span>
+            <a href="/products">Страхование</a>
+            <span><i class="fa fa-arrow-right"></i></span>
+            <span><%= title %></span>
+          </div>
+        </div>
+        <div class="fullwidth-block">
+          <div class="leaders">
+            <div class="container">
+              <h1 class="entry-title">Полезные советы по страхованию</h1>
+              <div class="col-md-9">
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <div class="panel-title">
+                      <label for="how_to_buy">Как купить страховой полис?</label>
+                    </div>
+                    <input type="checkbox" id="how_to_buy" style="display:none;">
+                    <div id="hidden" class="panel-body">
+                      Online:<br>
+                        &ndash;Заказать полис он-лайн <br>
+                        &ndash;Получить полис (доставка страховки бесплатно)<br>
+                      Офис страховой компании: <br>
+                        &ndash;Прийти в офис страховой компании <br>
+                        &ndash;Принести документы для оформления полиса	<br>
+                        &ndash;Оплатить страховку <br>
+                        &ndash;Получить полис<br>
+                      Call-center: <br>
+                        &ndash;Позвонить по номеру 8 (727) 388 1578 <br>
+                        &ndash;Отдать курьеру копии документов и оплату полиса <br>
+                        &ndash;Получить страховку (доставка полиса бесплатно) <br>
+                        &ndash;Купите страховой полис он-лайн в три клика и получите его с доставкой домой или в офис!
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <div class="panel-title">
+                      <label for="how_to_issue">Как оформить ипотеку?</label>
+                    </div>
+                  </div>
+                  <input type="checkbox" id="how_to_issue" style="display:none;">
+                  <div id="hidden" class="panel-body">
+                    &ndash;Подавайте заявления на ипотеку в несколько банков одновременно <br>
+                    &ndash;Для первоначального взноса вам понадобится не менее 10% от общей стоимости жилья <br>
+                    &ndash;Трудовой стаж на последнем месте работы должен быть более 6 месяцов <br>
+                    &ndash;При выборе недвижимости ориентируйтесь на сумму, которую можете выплачивать в данный момент <br>
+                    &ndash;Внимательно изучите пени, штрафы и условия досрочного погашения <br>
+                    &ndash;Определитесь со схемой платежа: оплата равными долями (ануитет) или дифференцированно <br>
+                    &ndash;Самостоятельно выберите страховую компанию с выгодными тарифами для страхования залоговой недвижимости <br>
+                    &ndash;Помните, что недвижимое имущество, купленное в ипотеку, находится в залоге у банка  <br>
+                    &ndash;Учитывая долгосрочность займов по ипотеке, позаботьтесь о ваших близких и застрахуйте себя от несчастных случаев на период ипотеки <br>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <div class="panel-title">
+                      <label for="how_to_prepare">Как подготовить квартиру к отъезду в отпуск?</label>
+                    </div>
+                  </div>
+                  <input type="checkbox" id="how_to_prepare" style="display: none;">
+                  <div id="hidden" class="panel-body">
+                    &ndash;Сделайте уборку дома; <br>
+                    &ndash;Выключите и отсоедините всю технику от сети питания; <br>
+                    &ndash;Проветрите квартиру; <br>
+                    &ndash;Перекройте газ и воду в квартире; <br>
+                    &ndash;Закройте балконные створки и двери; <br>
+                    &ndash;Плотно закройте окна; <br>
+                    &ndash;Передайте ключи от дома родственникам или друзьям для ухода за домашними животными; <br>
+                    &ndash;Передайте ключи от квартиры родственникам или друзьям для ухода за домашними растениями; <br>
+                    &ndash;Оформите полис страхования (дома, квартиры) и настройтесь на отдых!
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <div class="panel-title">
+                      <label for="how_to_do">Что делать при дорожно-транспортном происшествии (ДТП)?</label>
+                    </div>
+                  </div>
+                  <input type="checkbox" id="how_to_do" style="display: none;">
+                  <div id="hidden" class="panel-body">
+                    &ndash;Остановите автомобиль и включите аварийную световую сигнализацию; <br>
+                    &ndash;Установите знак аварийной остановки; <br>
+                    &ndash;Примите меры для оказания доврачебной медицинской помощи пострадавшим в ДТП; <br>
+                    &ndash;Вызовите скорую медицинскую помощь 103; <br>
+                    &ndash;Вызовите Дорожную полицию 102; <br>
+                    &ndash;До приезда инспектора не передвигайте машину; <br>
+                    &ndash;Вызовите аварийного страхового комиссара; <br>
+                    &ndash;Запишите контактные данные свидетелей дорожно-транспортного происшествия (ДТП) <br>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <div class="panel-title">
+                      <label for="for_tourist">Советы туристу</label>
+                    </div>
+                  </div>
+                  <input type="checkbox" id="for_tourist" style="display: none;">
+                  <div id="hidden" class="panel-body">
+                    &ndash;Перед поездкой за границу изучите традиции, законы, религию и культуру страны; <br>
+                    &ndash;Оформите при необходимости визу для въезда в страну; <br>
+                    &ndash;Уточните, есть ли список рекомендуемых прививок для посещения страны; <br>
+                    &ndash;Купите валюту на первое время, запаситесь мелкими купюрами; <br>
+                    &ndash;Посмотрите в интернете погоду и часовой пояс страны; <br>
+                    &ndash;Составьте список необходимых мест для посещения; <br>
+                    &ndash;Загрузите карты в мобильный телефон, планшет; <br>
+                    &ndash;Переведите самые распространенные слова на язык страны пребывания; <br>
+                    &ndash;Оформите медицинский Страхования для туристов. выезжающих за границу <br>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <div class="panel-title">
+                      <label for="how_to_move">Как организовать переезд?</label>
+                    </div>
+                  </div>
+                  <input type="checkbox" id="how_to_move" style="display: none;">
+                  <div id="hidden" class="panel-body">
+                    &ndash;Составьте план действий по переезду на другую квартиру или дом и список вещей; <br>
+                    &ndash;Запаситесь упаковочными материалами для имущества: коробками, сумками, пузырчатой пленкой, пенопластом, вакуумными пакетами, скотчем; <br>
+                    &ndash;Не делайте коробки слишком тяжелыми для удобства переноса; <br>
+                    &ndash;Пометьте на коробках их содержимое для удобства распаковывания; <br>
+                    &ndash;Обязательно пометьте хрупкие и бьющиеся вещи; <br>
+                    &ndash;Не везите лишний груз, выкидывайте без сожалений ненужные вещи или раздайте нуждающимся; <br>
+                    &ndash;Определите способ транспортировки груза: самостоятельно или при помощи транспортной компании; <br>
+                    &ndash;При перевозке мебели и габаритных вещей лучше нанять грузчиков; <br>
+                    &ndash;Выбирая транспортную компанию, обратите внимание на ее репутацию и отзывы в интернете; <br>
+                    &ndash;Застрахуйте свое имущество на время переезда, чтобы сохранить свои вещи <br>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <div class="panel-title">
+                      <label for="how_to_pack">Как упаковать чемодан туриста?</label>
+                    </div>
+                  </div>
+                  <input type="checkbox" id="how_to_pack" style="display: none;">
+                  <div id="hidden" class="panel-body">
+                    &ndash;Подготовьте список вещей; <br>
+                    &ndash;Разложите и оцените объем; <br>
+                    &ndash;Не берите вещи за границу «на всякий случай»; <br>
+                    &ndash;Укладывайте вещи плотно «рулончиками»; <br>
+                    &ndash;Деликатные вещи внутрь верхней одежды; <br>
+                    &ndash;Упакуйте вещи в пакеты для защиты от влаги и пыли; <br>
+                    &ndash;Лучше взять 1 большой чемодан, чем несколько; <br>
+                    &ndash;Вес багажа туриста не более 20 кг; <br>
+                    &ndash;Деньги, кредитные карты, документы и гаджеты возьмите в ручную; <br>
+                    &ndash;Купите полис Страхования для туристов. <br>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+
+
+<%- include inc_client/footer.ejs %>

@@ -1,0 +1,98 @@
+<%- include inc_client/header.ejs %>
+<%- include inc_client/menu.ejs %>
+
+      <main class="main-content">
+        <div class="breadcrumbs">
+          <div class="container">
+            <a href="/">Главная страница</a>
+            <span><i class="fa fa-arrow-right"></i></span>
+            <span><%= title %></span>
+          </div>
+        </div>
+
+        <div class="page">
+          <div class="container">
+            <h3 class="entry-title">Произошел страховой случай</h3>
+            <div class="row">
+              <hr>
+              <div class="help-box">
+                <div class="col-md-12">
+                  <h4 class="entry-title">Помощь</h4>
+                  <div class="col-md-6">
+                    <button><i class="fa fa-phone"></i><a href="tel:"> 8 (727) 388 1578</a></button><br>
+                    <small>Единый номер для всех городов, круглосуточная поддержка.</small>
+                  </div>
+                  <div class="col-md-6">
+                    <button><i class="fa fa-phone"></i><a href="tel:7090">7090</a></button><br>
+                    <small>Звонок бесплатный с любого мобильного оператора.</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br><br>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="help-form">
+                  <h3 class="section-title">Все сложно, перезвоните мне</h3>
+                  <h4 class="text-center"><%- messages('inc_client/messages.ejs', locals) %></h4>
+                  <br>
+                  <form action="/insurance_case/send" method="post" class="contact-form help-input">
+                    <div class="row">
+                      <div class="col-md-6"><input type="text" name="client_name" placeholder="Ваше имя"></div>
+                      <div class="col-md-6"><input type="text" name="client_phone" placeholder="Ваш телефон"></div>
+                      <div class="col-md-12"><input type="submit" value="Отправить"></div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <br><br>
+            <div class="row">
+              <h5 class="section-title">Выберите соответствующую категорию и следуйте инструкциям.</h5>
+              <div class="col-md-12">
+                <div class="col-md-3" data-link="/insurance/kasko">
+                  <div class="boxed-feature">
+                    <i class="icon-driving-sun"></i>
+                    <br>
+                    <div class="feature-desc">
+                      <h2 class="feature-title">Авто</h2>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-3" data-link="/insurance/travel">
+                  <div class="boxed-feature">
+                    <i class="icon-plane"></i>
+                    <br>
+                    <div class="feature-desc">
+                      <h2 class="feature-title">Путешествие</h2>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-3" data-link="/insurance/accident">
+                  <div class="boxed-feature">
+                    <i class="icon-heartbeat"></i>
+                    <br>
+                    <div class="feature-desc">
+                      <h2 class="feature-title">Несчастный случай</h2>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-3" data-link="/insurance/goods">
+                  <div class="boxed-feature">
+                    <i class="icon-home"></i>
+                    <br>
+                    <div class="feature-desc">
+                      <h2 class="feature-title">Имущество</h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+<%- include inc_client/footer.ejs %>

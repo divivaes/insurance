@@ -1,0 +1,78 @@
+<%- include inc_client/header.ejs %>
+<%- include inc_client/menu.ejs %>
+
+			<main class="main-content">
+				<div class="breadcrumbs">
+					<div class="container">
+						<a href="/">Главная страница</a>
+						<span><i class="fa fa-arrow-right"></i></span>
+						<span><%= title %></span>
+					</div>
+				</div>
+				<div class="page">
+					<div class="container">
+						<h3 class="entry-title">Калькуляторы</h3>
+						<div class="filter-links filterable-nav">
+							<select class="mobile-filter">
+								<option value=".kasko">КАСКО</option>
+								<!-- <option value=".ds-gpo">ДС ГПО автовладельцев</option> -->
+								<option value=".apartment">Недвижимость</option>
+								<option value=".tourism">Туризм</option>
+								<option value=".accident">Несчастный случай</option>
+								<!-- <option value=".medins">Медицинское страхование</option> -->
+							</select>
+							<a href="#" class="wow afdeInRight" data-wow-delay=".1s" data-filter="*">Показать все</a>
+							<a href="#" class="wow fadeInRight" data-wow-delay=".2s" data-filter=".kasko">КАСКО</a>
+							<!-- <a href="#" class="wow fadeInRight" data-wow-delay=".4s" data-filter=".lifeins">Страхование жизни</a> -->
+							<a href="#" class="wow fadeInRight" data-wow-delay=".6s" data-filter=".apartment">Недвижимость</a>
+							<a href="#" class="wow fadeInRight" data-wow-delay=".6s" data-filter=".tourism">Туризм</a>
+							<a href="#" class="wow fadeInRight" data-wow-delay=".6s" data-filter=".accident">Несчастный случай</a>
+							<!-- <a href="#" class="wow fadeInRight" data-wow-delay=".6s" data-filter=".medins">Медицинское страхование</a> -->
+						</div>
+
+						<div class="filterable-items">
+							<div class="insurance-item filterable-item kasko">
+								<div class="insurance-content">
+									<div class="insurance-icon"><i class="icon-key-card"></i></div>
+									<h3 class="insurance-title">КАСКО</h3>
+									<p>Защита для вашего автомобиля от множества рисков: от мелких царапин до угона. Если Вы попали в ДТП, вашу машину разбили хулиганы или угнали, то страховая компания оплатит ремонт и восстановление вашего автомобиля, либо выплатит компенсацию для покупки нового авто.</p>
+									<a href="/insurance/kasko" class="button">Рассчитать и оформить</a>
+								</div>
+							</div>
+
+							<div class="insurance-item filterable-item apartment">
+								<div class="insurance-content">
+									<div class="insurance-icon"><i class="icon-bank"></i></div>
+									<h3 class="insurance-title">Недвижимость</h3>
+									<p>Пожар, потоп, грабители или стихийное бедствие — с нами эти проблемы уже не страшны.</p>
+									<a href="/insurance/goods" class="button">Рассчитать и оформить</a>
+								</div>
+							</div>
+
+							<div class="insurance-item filterable-item tourism">
+								<div class="insurance-content">
+									<div class="insurance-icon"><i class="icon-luggage"></i></div>
+									<h3 class="insurance-title">Туризм</h3>
+									<p>Страхование туристов  защитит вас от незапланированных затрат и обеспечит спокойствие за свое здоровье во время путешествий, обучения или командировки за границей. </p>
+									<a href="/insurance/tourism" class="button">Рассчитать и оформить</a>
+								</div>
+							</div>
+
+							<div class="insurance-item filterable-item accident">
+								<div class="insurance-content">
+									<div class="insurance-icon"><i class=" icon-bar-chart-down"></i></div>
+									<h3 class="insurance-title">Несчастный случай</h3>
+									<p>Договор страхования — круглосуточная защита на каждый день для взрослых и детей, которая компенсирует расходы на лечение в результате несчастного случая.</p>
+									<a href="/insurance/accident" class="button">Рассчитать и оформить</a>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+
+
+	  		</main>
+
+<%- include inc_client/footer.ejs %>

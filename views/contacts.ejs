@@ -1,0 +1,59 @@
+<%- include inc_client/header.ejs %>
+<%- include inc_client/menu.ejs %>
+
+
+
+
+			<main class="main-content">
+        <div class="breadcrumbs">
+          <div class="container">
+            <a href="/">Главная страница</a>
+            <span><i class="fa fa-arrow-right"></i></span>
+            <span><%= title %></span>
+          </div>
+        </div>
+
+        <div class="page">
+          <div class="container">
+            <div class="map"></div>
+
+            <div class="row">
+              <div class="col-md-3">
+                <h2 class="section-title text-left">Адрес</h2>
+
+                <div class="contact-detail">
+                  <address>
+                    <p>ЦФ АО "CК Виктория"<br>
+                      улица Рыскулова 52, Талгар 041600</p>
+
+                    <p>Телефон: 8 (727) 388 1578
+                      <br>
+                      Почта: service@info.kz</p>
+                  </address>
+                </div>
+              </div>
+              <div class="col-md-9">
+								<h3><%- messages('inc_client/messages.ejs', locals) %></h3>
+                <h2 class="section-title text-left">Контактная форма</h2>
+                <form action="/contacts/send" method="post" class="contact-form">
+                  <div class="row">
+                    <div class="col-md-4"><input type="text" name="client_name" placeholder="Ваше имя"></div>
+                    <div class="col-md-4"><input type="text" name="client_email" placeholder="Ваша электронная почта"></div>
+                    <div class="col-md-4"><input type="text" class="phone" name="client_phone" placeholder="Ваш телефон"></div>
+                  </div>
+
+                  <textarea name="client_message" placeholder="Сообщение"></textarea>
+
+                  <p class="text-right">
+                    <input type="submit"  value="Отправить">
+                  </p>
+                </form>
+
+
+              </div>
+            </div>
+          </div>
+        </div> <!-- .page -->
+      </main>
+
+<%- include inc_client/footer.ejs %>
