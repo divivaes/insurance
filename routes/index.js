@@ -23,10 +23,17 @@ router.use(bodyParser.urlencoded({      // to support URL - encoded bodies
 
 
 router.all('/', function (req, res, next){
-    res.render('index',{
-        title: 'Главная страница',
-        url: '/'
-    });
+  connection_cl.query('select * from ic_news limit 3', function (err, rows) {
+    if (err) {
+      console.log('Error selecting: %s', err);
+    } else {
+      res.render('index',{
+          title: 'Главная страница',
+          url: '/',
+          data: rows
+      });
+    }
+  });
 });
 
 router.all('/company', function (req, res, next) {
@@ -94,6 +101,9 @@ router.all('/products', function (req, res, next) {
 
 router.post('/contacts/send', function (req, res, next) {
   var input = JSON.parse(JSON.stringify(req.body));
+  var currentTime = new Date().toLocaleTimeString();
+  var currentDate = new Date().toLocaleDateString();
+  var createdDate = currentTime + ' ' + currentDate;
 
   var data = {
       f_name : input.client_name,
@@ -101,7 +111,10 @@ router.post('/contacts/send', function (req, res, next) {
       f_phone: input.client_phone,
       f_message: input.client_message,
       f_status: 0,
-      f_form_type: 1
+      f_form_type: 1,
+      f_served_mid: 2,
+      f_created_at: createdDate,
+      f_updated_at: createdDate
   };
 
   console.log(data);
@@ -117,6 +130,9 @@ router.post('/contacts/send', function (req, res, next) {
 
 router.post('/insurance_case/send', function (req, res, next) {
   var input = JSON.parse(JSON.stringify(req.body));
+  var currentTime = new Date().toLocaleTimeString();
+  var currentDate = new Date().toLocaleDateString();
+  var createdDate = currentTime + ' ' + currentDate;
 
   var data = {
       f_name : input.client_name,
@@ -124,7 +140,10 @@ router.post('/insurance_case/send', function (req, res, next) {
       f_phone: input.client_phone,
       f_message: '',
       f_status: 0,
-      f_form_type: 2
+      f_form_type: 2,
+      f_served_mid: 2,
+      f_created_at: createdDate,
+      f_updated_at: createdDate
   };
 
   console.log(data);
@@ -170,6 +189,7 @@ router.post('/insurance/kasko/add', function (req, res, next) {
         ins_price            : input.ins_price,
         ins_type             : 1,
         served_mid           : 2,
+        status               : 0,
         created_at           : createdDate,
         updated_at           : createdDate
     };
@@ -243,6 +263,7 @@ router.post('/insurance/tourism/add', function (req, res, next) {
         insurance_price      : input.ins_price,
         insurance_type       : 2,
         served_mid           : 2,
+        status               : 0,
         created_at           : createdDate,
         updated_at           : createdDate
     };

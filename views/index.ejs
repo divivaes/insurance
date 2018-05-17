@@ -117,31 +117,31 @@
 					</div> <!-- .container -->
 				</div> <!-- .offer-section -->
 
-				<div class="fullwidth-block">
-					<div class="container">
-						<h2 class="section-title">Последние новости</h2>
-						<div class="row news-list">
-							<div class="col-md-4">
-								<div class="news">
-									<figure><img src="images/news-1.jpg" alt=""></figure>
-									<div class="date"><img src="images/icon-calendar.png" alt="">16:30:59 2018-5-01</div>
-									<h2 class="entry-title"><a href="#">Мы открылись</a></h2>
-								</div>
-							</div>
-							<div class="col-md-4">
-								<div class="news">
-									<figure><img src="images/news-2.jpg" alt=""></figure>
-									<div class="date"><img src="images/icon-calendar.png" alt="">10:55:06 2018-4-25</div>
-									<h2 class="entry-title"><a href="#">Наша компания</a></h2>
-								</div>
-							</div>
-							<div class="col-md-4">
-								<div class="news">
-									<figure><img src="images/news-3.jpg" alt=""></figure>
-									<div class="date"><img src="images/icon-calendar.png" alt="">09:20:07 2018-5-10</div>
-									<h2 class="entry-title"><a href="#">С днем победы</a></h2>
-								</div>
-							</div>
+				<% if(data.length){ %>
+					<div class="fullwidth-block">
+						<div class="container">
+							<h2 class="section-title">Последние новости</h2>
+								<div class="row news-list"> <%
+							for(var i = 0;i < data.length;i++) { %>
+
+
+											<div class="col-md-4">
+												<div class="news">
+													<figure><img src="images/news-1.jpg" alt=""></figure>
+													<div class="date"><img src="images/icon-calendar.png" alt=""><%= data[i].n_date %></div>
+													<h2 class="entry-title"><a href="#"><%= data[i].n_title %></a></h2>
+												</div>
+											</div>
+											<% }
+
+                  }else{ %>
+                  	<div class="col-md-12">
+                  		<div class="news-block">
+                  			<h2>Не найдено новостей</h2>
+                  		</div>
+                  	</div>
+                <% } %>
+
 						</div> <!-- .row -->
 					</div> <!-- .container -->
 				</div> <!-- .latest-news-section -->
